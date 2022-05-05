@@ -1,0 +1,45 @@
+<ng-container *ngIf="allRates$ | async as rates">
+  <div class="exchange-conteiner">
+    <div class="exchange-block">
+      <form class="exchange-form" [formGroup]="convertForm">
+        <span>Exchange Rates</span>
+        <div class="exchange-item">
+          <mat-form-field class="exchange-input" appearance="fill">
+            <mat-label>Enter some input</mat-label>
+            <input formControlName="valueBefore" 
+                   matInput maxlength="10" 
+                   placeholder="Ex. Nougat"
+                   #amountValue>
+          </mat-form-field>
+                    
+          <mat-form-field appearance="fill" class="exchange-select">
+            <mat-label>Rate</mat-label>
+              <mat-select formControlName="rateFrom">
+                <mat-option *ngFor="let rate of rates" [value]="rate">{{rate}}</mat-option>                  
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="exchange-item">
+          <mat-form-field appearance="fill" class="exchange-input">
+            <mat-label>Enter some input</mat-label>
+            <input formControlName="valueAfter" 
+                   matInput maxlength="10" 
+                   placeholder="Ex. Nougat"
+                   #resultValue>
+          </mat-form-field>
+                    
+          <mat-form-field appearance="fill" class="exchange-select">
+            <mat-label>Rate</mat-label>
+              <mat-select formControlName="rateTo">
+                <mat-option *ngFor="let rate of rates" [value]="rate">{{rate}}</mat-option>
+              </mat-select>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </div>
+    
+  <ng-container *ngIf="formValue$ | async"></ng-container>
+  <ng-container *ngIf="formAmountValue$ | async"></ng-container>
+  <ng-container *ngIf="formResultValue$ | async"></ng-container>
+</ng-container>

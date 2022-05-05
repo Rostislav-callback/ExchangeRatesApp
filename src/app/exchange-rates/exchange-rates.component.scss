@@ -1,0 +1,66 @@
+.exchange-conteiner {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 64px);
+  background: 
+    linear-gradient(217deg, #beebfa, rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, #c6c7f7, rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, #e6c6f7, rgba(0,0,255,0) 70.71%);
+  justify-content: center;
+
+    .exchange-block {
+        padding-top: 150px;
+        width: 400px;
+
+      .exchange-form {
+        text-align: center;
+
+        span {
+          font-size: 30px;
+        }
+
+      .exchange-item {
+        display: flex;
+        margin-top: 20px;
+        gap: 10px;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+.exchange-input {
+  width: 300px;
+}
+
+.exchange-select {
+  width: 70px;
+}
+
+::ng-deep .mat-button-wrapper {
+  color: black;
+}
+
+::ng-deep .cdk-overlay-pane {
+  left: 1045px !important;
+}
+
+::ng-deep .mat-option-text {
+  text-align: center;
+}
+
+::ng-deep .cdk-overlay-container {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 15px;
+        background-color: rgba(163, 163, 163, 0.2);
+        border-radius: 5px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        width: 30px;
+      }
+}
+

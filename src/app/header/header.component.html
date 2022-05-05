@@ -1,0 +1,13 @@
+<mat-toolbar class="toolbar-block">
+  <div class="left_side-block">
+    <span class="side-menu-title">Exchange Rates App</span>
+  </div>
+  <div class="right_side-block" *ngIf="currentRates$ | async as rates">
+    <div>
+      USD: {{rates.usd | currency: "UAH":'symbol-narrow'}}
+    </div>
+    <div>
+      EUR: {{rates.eur | currency: "UAH":'symbol-narrow'}}
+    </div>
+  </div>
+</mat-toolbar>

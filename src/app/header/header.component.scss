@@ -1,0 +1,20 @@
+%toolbarItems {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.toolbar-block {
+  background-color: #333333;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: inset 0px -6px 5px -4px #fff;
+
+  .left_side-block {
+    @extend %toolbarItems;
+  }
+
+  .right_side-block {
+    @extend %toolbarItems;
+  }
+}
